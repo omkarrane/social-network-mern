@@ -11,7 +11,7 @@ const typeDefs = gql`
     id: ID!
     body: String!
     username: String!
-    createdAt: String!
+    createdAt: String!  # TODO: Change this to Date type
   }
 
   type Query {
