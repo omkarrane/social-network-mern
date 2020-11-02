@@ -10,6 +10,22 @@ module.exports = {
       catch(err) {
         throw new Error(err);
       }
+    },
+
+    getPost: async (parent, { postId }) => {
+      try {
+        const post = await Post.findById(postId);
+        if (!post)
+          throw new Error("Post not found");
+        return post;
+      } catch(err) {
+        throw new Error(err);
+      }
+    }
+  },
+  Mutation: {
+    createPost(parent, { body }) {
+      
     }
   }
 }
